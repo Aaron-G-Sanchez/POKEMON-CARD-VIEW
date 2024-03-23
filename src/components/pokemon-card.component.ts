@@ -10,7 +10,6 @@ import { MatCardModule } from '@angular/material/card'
   styleUrl: './pokemon-card.scss',
 })
 export class PokemonCard {
- title = 'pokemon-card'
  @Input() pokemon!:Pokemon 
 
 }
