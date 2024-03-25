@@ -10,5 +10,4 @@ import { CardDisplay } from '../pages/card-display/card-display.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'pokemon-card-view';
 }

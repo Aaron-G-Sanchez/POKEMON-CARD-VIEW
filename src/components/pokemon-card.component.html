@@ -1,3 +1,7 @@
-<mat-card>
-  <mat-card-content>{{pokemon.name}}</mat-card-content>
+<div *ngIf="isLoading">
+  <p>Loading...</p>
+</div>
+<mat-card *ngIf="!isLoading">
+  <mat-card-title>{{details.name}}</mat-card-title>
+  <img mat-card-sm-image src={{details.sprites.front_default}} alt="picture of {{details.name}}">
 </mat-card>

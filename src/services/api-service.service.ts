@@ -6,6 +6,7 @@ import { Observable} from 'rxjs'
 @Injectable({
   providedIn: 'root'
 })
+
 export class ApiService {
   baseUrl: string = 'https://pokeapi.co/api/v2/pokemon?limit=151'
 
@@ -13,5 +14,9 @@ export class ApiService {
 
   getPokemon(): Observable<any> {
     return this.http.get<any>(this.baseUrl)
+  }
+
+  getPokemonDetails(url: string): Observable<any> {
+    return this.http.get<any>(url)
   }
 }
