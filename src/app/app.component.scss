@@ -21,6 +21,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-y: scroll;
+}
+
+.card-display::-webkit-scrollbar {
+  display: none;
 }
 
 .pokemon-wrapper{
