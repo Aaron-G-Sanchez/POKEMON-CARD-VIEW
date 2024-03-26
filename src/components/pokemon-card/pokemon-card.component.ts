@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core'
 import { CommonModule} from "@angular/common"
-import {Pokemon} from '../interfaces/pokemon'
+import {Pokemon} from '../../interfaces/pokemon'
 import { MatCardModule } from '@angular/material/card'
-import { ApiService } from '../services/api-service.service'
+import { ApiService } from '../../services/api-service.service'
 
 @Component({
   selector: 'pokemon-card',

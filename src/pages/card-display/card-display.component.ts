@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { CommonModule } from '@angular/common'
-import { PokemonCard } from '../../components/pokemon-card.component'
+import { PokemonCard } from '../../components/pokemon-card/pokemon-card.component'
 import { ApiService } from '../../services/api-service.service' 
 import { Pokemon } from '../../interfaces/pokemon'
 
