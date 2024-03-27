@@ -1,6 +1,6 @@
 :host{
   height: 100%;
-  width: 80%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -8,11 +8,10 @@
   gap: 3%;
   overflow-y: scroll;
 
-  ::-webkit-scrollbar{
+  &::-webkit-scrollbar{
     display: none;
   }
 }
-
 
 .pokemon-card-wrapper {
   width: calc(100% / 4);
