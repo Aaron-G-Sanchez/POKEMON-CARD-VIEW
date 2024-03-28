@@ -1,11 +1,13 @@
-<div *ngIf="isLoading">
+<ng-container *ngIf="isLoading">
   <p>Loading...</p>
-</div>
-<mat-card *ngIf="!isLoading" class="pokemon-card {{details.types[0].type.name}}">
-  <mat-card-header class="pokemon-card-header">
-    <mat-card-title class="pokemon-name">{{details.name}}</mat-card-title>
-  </mat-card-header>
-  <mat-card-content class="pokemon-card-content">
-    <img mat-card-lg-image class="pokemon-img" src={{details.sprites.front_default}} alt="picture of {{details.name}}">
-  </mat-card-content>
-</mat-card>
+</ng-container>
+<ng-container *ngIf="!isLoading">
+  <mat-card class="pokemon-card {{details.types[0].type.name}}" >
+    <mat-card-header class="pokemon-card-header">
+      <mat-card-title class="pokemon-name">{{details.name}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="pokemon-card-content">
+      <img mat-card-lg-image class="pokemon-img" src={{details.sprites.front_default}} alt="picture of {{details.name}}">
+    </mat-card-content>
+  </mat-card>
+</ng-container>

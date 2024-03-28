@@ -13,7 +13,6 @@ import { Pokemon } from '../../interfaces/pokemon'
   styleUrl: './card-display.scss',
 })
 
-// TODO Need to try and see if pokemon can be fetched and set here.
 export class CardDisplay implements OnInit {
   pokemonList: Pokemon[] = []
 
