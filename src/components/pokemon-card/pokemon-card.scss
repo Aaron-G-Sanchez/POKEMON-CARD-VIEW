@@ -1,3 +1,8 @@
+// General colors
+$card-bg-color: #343846;
+$card-font-color: #ebedf2;
+
+// Pokemon type colors
 $grass-bg-color: #77cc55;
 $fire-bg-color: #fd4423;
 $water-bg-color: #3399ff;
@@ -24,98 +29,139 @@ $fairy-bg-color: #ee99ee;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: ease-in-out .3s;
+  background-color: $card-bg-color;
+  color: $card-font-color;
 }
 
 .pokemon-card-header {
   width: 100%;
-  height: 10%;
+  height: 30%;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0;
 }
 
 .pokemon-card-content {
   width: 100%;
-  height: 90%;
+  height: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0;
 }
 
-.pokemon-img {
-  background-color: #fffff3;
-  border-radius: 3px !important;
-}
+// .pokemon-img {
+//   background-color: #fffff3;
+//   border-radius: 3px !important;
+// }
 
 .grass {
-  background-color: $grass-bg-color;
+  &:hover{
+    background-color: $grass-bg-color;
+  }
 }
 
 .fire {
-  background-color: $fire-bg-color
+  &:hover{
+    background-color: $fire-bg-color
+  }
 }
 
 .water {
-  background-color: $water-bg-color;
+  &:hover {
+    background-color: $water-bg-color;
+  }
 }
 
 .normal {
-  background-color: $normal-bg-color;
+  &:hover {
+   background-color: $normal-bg-color;
+  }
 }
 
 .electric {
-  background-color: $electric-bg-color;
+  &:hover {
+    background-color: $electric-bg-color;
+  }
 }
 
 .ice {
-  background-color: $ice-bg-color;
+  &:hover {
+    background-color: $ice-bg-color;
+  }
 }
 
 .fighting {
- background-color: $fighting-bg-color;
+  &:hover {
+    background-color: $fighting-bg-color;
+  }
 }
 
 .poison {
-  background-color: $poison-bg-color;
+  &:hover {
+    background-color: $poison-bg-color;
+  }
 }
 
 .ground {
-  background-color: $ground-bg-color;
+  &:hover {
+    background-color: $ground-bg-color;
+  }
 }
   
 .flying {
-  background-color: $flying-bg-color;
+  &:hover {
+    background-color: $flying-bg-color;
+  }
 }
 
 .psychic {
-  background-color: $psychic-bg-color;
+  &:hover {
+    background-color: $psychic-bg-color;
+  }
 }
 
 .bug {
-  background-color: $bug-bg-color;
+  &:hover {
+    background-color: $bug-bg-color;
+  }
 }
 
 .rock {
-  background-color: $rock-bg-color;
+  &:hover {
+    background-color: $rock-bg-color;
+  }
 }
 
 .ghost {
-  background-color: $ghost-bg-color;
+  &:hover {
+    background-color: $ghost-bg-color;
+  }
 }
 
 .dragon {
-  background-color: $dragon-bg-color;
+  &:hover {
+    background-color: $dragon-bg-color;
+  }
 }
 
 .dark {
-  background-color: $dark-bg-color;
+  &:hover {
+    background-color: $dark-bg-color;
+  }
 }
 
 .steel {
-  background-color: $steel-bg-color;
+  &:hover {
+    background-color: $steel-bg-color;
+  }
 }
 
 .fairy {
-  background-color: $fairy-bg-color;
+  &:hover {
+    background-color: $fairy-bg-color;
+  }
 }

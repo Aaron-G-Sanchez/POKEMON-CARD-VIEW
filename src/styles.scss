@@ -1,3 +1,5 @@
+$primary-bg-color: #1f2128;
+
 * {
   margin: 0;
   padding: 0;
@@ -11,5 +13,5 @@ body {
   align-items: center;
   flex-direction: column;
   justify-content: center; 
-  background-color: gray;
+  background-color: $primary-bg-color;
 }
