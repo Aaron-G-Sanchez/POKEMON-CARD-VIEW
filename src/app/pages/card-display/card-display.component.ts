@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common'
 import { PokemonCard } from '../../components/pokemon-card/pokemon-card.component'
 import { ApiService } from '../../services/api-service.service' 
 import { Pokemon } from '../../interfaces/pokemon'
+import { Observable } from 'rxjs'
+import { Store } from '@ngrx/store'
 
 
 @Component({
@@ -14,10 +16,17 @@ import { Pokemon } from '../../interfaces/pokemon'
 })
 
 export class CardDisplay implements OnInit {
+  count$: Observable<number>
   pokemonList: Pokemon[] = []
 
-  constructor(private apiService: ApiService){}
+  constructor(
+    private apiService: ApiService,
+    private store: Store<{ count: number }>
+    ){
+    this.count$ = store.select('count')
+  }
 
+  
   ngOnInit() {
     this.apiService.getPokemon()
       .subscribe(data => {
