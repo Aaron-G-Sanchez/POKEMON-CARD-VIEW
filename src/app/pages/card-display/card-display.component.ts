@@ -16,14 +16,14 @@ import { Store } from '@ngrx/store'
 })
 
 export class CardDisplay implements OnInit {
-  count$: Observable<number>
+  currentParty$: any
   pokemonList: Pokemon[] = []
 
   constructor(
     private apiService: ApiService,
-    private store: Store<{ count: number }>
+    private store: Store<{ party: any }>
     ){
-    this.count$ = store.select('count')
+    this.currentParty$ = store.select('party')
   }
 
   
