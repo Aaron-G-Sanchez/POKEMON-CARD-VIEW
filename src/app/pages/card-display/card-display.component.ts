@@ -16,7 +16,7 @@ import { Store } from '@ngrx/store'
 })
 
 export class CardDisplay implements OnInit {
-  currentParty$: any
+  currentParty$: Observable<any>
   pokemonList: Pokemon[] = []
 
   constructor(
