@@ -2,4 +2,18 @@ $header-font-color: #ebedf2;
 
 :host {
   color: $header-font-color;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tool-bar {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
