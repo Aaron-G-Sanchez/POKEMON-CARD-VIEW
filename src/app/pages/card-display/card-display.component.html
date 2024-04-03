@@ -1,6 +1,12 @@
-<ng-container *ngFor="let pokemon of pokemonList" >
-  <pokemon-card class="pokemon-card-wrapper" [pokemon]="pokemon" />
-</ng-container>
-<div>
-  Current Party : {{ currentParty$ | async }}
-</div>
+<mat-sidenav-container class="side-nav-wrapper">
+  <mat-sidenav>
+    <div>
+      Current Party : {{ currentParty$ | async }}
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content class="side-nav-content">
+    <ng-container *ngFor="let pokemon of pokemonList">
+      <pokemon-card class="pokemon-card-wrapper" [pokemon]="pokemon" />
+    </ng-container>
+  </mat-sidenav-content>
+</mat-sidenav-container>

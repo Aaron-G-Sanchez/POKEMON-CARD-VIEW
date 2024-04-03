@@ -1,4 +1,5 @@
 $header-font-color: #ebedf2;
+$primary-bg-color: #1f2128;
 
 :host {
   color: $header-font-color;
@@ -10,10 +11,12 @@ $header-font-color: #ebedf2;
 }
 
 .tool-bar {
+  height: 100%;
   width: 100%;
   padding: 0;
   margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: $primary-bg-color;
 }

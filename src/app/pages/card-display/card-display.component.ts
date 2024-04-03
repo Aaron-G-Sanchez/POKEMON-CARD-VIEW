@@ -5,12 +5,13 @@ import { ApiService } from '../../services/api-service.service'
 import { Pokemon } from '../../interfaces/pokemon'
 import { Observable } from 'rxjs'
 import { Store } from '@ngrx/store'
+import {MatSidenavModule} from '@angular/material/sidenav'
 
 
 @Component({
   selector: 'card-display',
   standalone: true,
-  imports: [CommonModule, PokemonCard],
+  imports: [CommonModule, PokemonCard, MatSidenavModule],
   templateUrl: './card-display.component.html',
   styleUrl: './card-display.scss',
 })
