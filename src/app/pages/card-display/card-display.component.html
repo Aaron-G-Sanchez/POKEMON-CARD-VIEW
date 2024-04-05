@@ -3,8 +3,11 @@
     <div>
       Current Party
     </div>
-    <ng-container *ngFor="let member of currentParty$ |async">
-      <div>{{member.name}}</div>
+    <!-- TODO First check if array is empty then loop through the party array and display the pokemon. -->
+    <ng-container *ngIf="(currentParty$ | async).length < 1; else partyDisplay">
+      <div>
+        <p>No Pokemon in your party!</p>
+      </div>
     </ng-container>
   </mat-sidenav>
   <mat-sidenav-content class="side-nav-content">
@@ -13,3 +16,10 @@
     </ng-container>
   </mat-sidenav-content>
 </mat-sidenav-container>
+
+<ng-template #partyDisplay >
+  <ng-container *ngFor="let member of currentParty$ |async">
+    <!-- TODO Add a material card for each pokemon. -->
+    <p>{{member.name}}</p>
+  </ng-container>
+</ng-template>
