@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, OnChanges } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { PokemonCard } from '../../components/pokemon-card/pokemon-card.component'
 import { ApiService } from '../../services/api-service.service' 
@@ -47,8 +47,7 @@ export class CardDisplay implements OnInit {
 
   // TODO Replace with the action to add selected pokemon to state.
   addToTeam() {
-    console.log("Added!");
-    this.store.dispatch(ADD_POKEMON())
+    this.store.dispatch(ADD_POKEMON({pokemon: this.selectedPokemon}))
   }
 
   // TODO Look into having a button on the pokemon card to add the pokemon to the team

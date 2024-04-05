@@ -1,8 +1,11 @@
 <mat-sidenav-container class="side-nav-wrapper">
   <mat-sidenav class="side-nav-drawer" [opened]="sidenavService.sidenavState$ |async">
     <div>
-      Current Party : {{ currentParty$ | async }}
+      Current Party
     </div>
+    <ng-container *ngFor="let member of currentParty$ |async">
+      <div>{{member.name}}</div>
+    </ng-container>
   </mat-sidenav>
   <mat-sidenav-content class="side-nav-content">
     <ng-container *ngFor="let pokemon of pokemonList">
