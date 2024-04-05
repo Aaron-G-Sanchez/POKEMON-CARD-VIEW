@@ -2,6 +2,7 @@ import { Component } from "@angular/core";
 import { MatToolbar } from '@angular/material/toolbar'
 import { MatButtonModule } from '@angular/material/button'
 import {MatIconModule} from '@angular/material/icon';
+import { SidenavService } from "../../services/sidenav-service.service";
 
 
 @Component({
@@ -12,5 +13,5 @@ import {MatIconModule} from '@angular/material/icon';
   styleUrl: "./nav-bar.scss"
 })
 export class NavBar {
-  title: string = "nav-bar"
+  constructor(public sidenavService: SidenavService){}
 }

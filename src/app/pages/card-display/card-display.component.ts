@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { PokemonCard } from '../../components/pokemon-card/pokemon-card.component'
 import { ApiService } from '../../services/api-service.service' 
+import { SidenavService } from '../../services/sidenav-service.service'
 import { Pokemon } from '../../interfaces/pokemon'
 import { Observable } from 'rxjs'
 import { Store } from '@ngrx/store'
@@ -22,7 +23,8 @@ export class CardDisplay implements OnInit {
 
   constructor(
     private apiService: ApiService,
-    private store: Store<{ party: any }>
+    private store: Store<{ party: any }>,
+    public sidenavService: SidenavService
     ){
     this.currentParty$ = store.select('party')
   }

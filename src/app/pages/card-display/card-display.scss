@@ -18,6 +18,14 @@ $primary-bg-color: #1f2128;
   background-color: $primary-bg-color;
 }
 
+// .side-nav-drawer {
+//   display: none;
+// }
+
+.closed {
+  display: none;
+}
+
 .side-nav-content {
   height: 100%;
   width: 100%;
