@@ -1,15 +1,14 @@
 import { Component, OnInit, OnChanges } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { PokemonCard } from '../../components/pokemon-card/pokemon-card.component'
-import { ApiService } from '../../services/api-service.service' 
+import { ApiService } from '../../services/api-service.service'
+import { ADD_POKEMON } from '../../store/current-party.actions'
 import { Pokemon } from '../../interfaces/pokemon'
 import { Observable } from 'rxjs'
 import { Store } from '@ngrx/store'
 import { SidenavService } from '../../services/sidenav-service.service'
 import {MatSidenavModule} from '@angular/material/sidenav'
 import {MatSnackBar} from '@angular/material/snack-bar'
-import { ADD_POKEMON } from '../../store/current-party.actions'
-
 
 @Component({
   selector: 'card-display',
@@ -18,7 +17,6 @@ import { ADD_POKEMON } from '../../store/current-party.actions'
   templateUrl: './card-display.component.html',
   styleUrl: './card-display.scss',
 })
-// TODO  look into adding the snackbar as the way to add a pokemon to the current party.
 export class CardDisplay implements OnInit {
   currentParty$: Observable<any>
   pokemonList: Pokemon[] = []
@@ -45,7 +43,6 @@ export class CardDisplay implements OnInit {
     this.openSnackBar()
   }
 
-  // TODO Replace with the action to add selected pokemon to state.
   addToTeam() {
     this.store.dispatch(ADD_POKEMON({pokemon: this.selectedPokemon}))
   }
