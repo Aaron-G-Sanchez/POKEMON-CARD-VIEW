@@ -3,6 +3,8 @@ export interface Pokemon {
   url: string
 }
 
+// TODO need to get this interface to match the pokemon
+// details.
 export interface PokemonDetails {
   moves: [
     {

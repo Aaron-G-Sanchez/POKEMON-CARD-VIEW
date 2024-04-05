@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core'
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core'
 import { CommonModule} from "@angular/common"
 import {Pokemon} from '../../interfaces/pokemon'
 import { MatCardModule } from '@angular/material/card'
@@ -13,6 +13,7 @@ import { ApiService } from '../../services/api-service.service'
 })
 export class PokemonCard implements OnInit{
  @Input() pokemon!:Pokemon 
+ @Output() pokemonData = new EventEmitter<any>()
  details!: any
  isLoading: boolean = true
 
@@ -24,5 +25,12 @@ export class PokemonCard implements OnInit{
         this.details = data
         this.isLoading = false
       })
+  }
+
+  // TODO Need to pass the details to the parent (card-display) component
+  // for display in the sidenav.
+  passPokemon() {
+    // console.log(this.details);
+    this.pokemonData.emit(this.details)
   }
 }

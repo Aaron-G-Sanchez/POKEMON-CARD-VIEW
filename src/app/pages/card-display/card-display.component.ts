@@ -20,6 +20,7 @@ import {MatSidenavModule} from '@angular/material/sidenav'
 export class CardDisplay implements OnInit {
   currentParty$: Observable<any>
   pokemonList: Pokemon[] = []
+  selectedPokemon: any
 
   constructor(
     private apiService: ApiService,
@@ -35,5 +36,9 @@ export class CardDisplay implements OnInit {
       .subscribe(data => {
         this.pokemonList = data.results
       })
+  }
+
+  getSelectedPokemon($event: any){
+    this.selectedPokemon = $event
   }
 }

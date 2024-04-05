@@ -2,7 +2,7 @@
   <p>Loading...</p>
 </ng-container>
 <ng-container *ngIf="!isLoading">
-  <mat-card class="pokemon-card {{details.types[0].type.name}}" >
+  <mat-card class="pokemon-card {{details.types[0].type.name}}" (click)="passPokemon()">
     <mat-card-header class="pokemon-card-header">
       <mat-card-title class="pokemon-name">{{details.name}}</mat-card-title>
     </mat-card-header>

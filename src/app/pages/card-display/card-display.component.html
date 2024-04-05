@@ -6,7 +6,7 @@
   </mat-sidenav>
   <mat-sidenav-content class="side-nav-content">
     <ng-container *ngFor="let pokemon of pokemonList">
-      <pokemon-card class="pokemon-card-wrapper" [pokemon]="pokemon" />
+      <pokemon-card class="pokemon-card-wrapper" [pokemon]="pokemon" (pokemonData)="getSelectedPokemon($event)"/>
     </ng-container>
   </mat-sidenav-content>
 </mat-sidenav-container>
