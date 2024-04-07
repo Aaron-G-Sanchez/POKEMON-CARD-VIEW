@@ -1,6 +1,7 @@
 import { Component, OnInit, OnChanges } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { PokemonCard } from '../../components/pokemon-card/pokemon-card.component'
+import { PartyDisplay } from '../../components/party-display/party-display.component'
 import { ApiService } from '../../services/api-service.service'
 import { ADD_POKEMON } from '../../store/current-party.actions'
 import { Pokemon } from '../../interfaces/pokemon'
@@ -13,7 +14,7 @@ import {MatSnackBar} from '@angular/material/snack-bar'
 @Component({
   selector: 'card-display',
   standalone: true,
-  imports: [CommonModule, PokemonCard, MatSidenavModule],
+  imports: [CommonModule, PokemonCard, PartyDisplay, MatSidenavModule],
   templateUrl: './card-display.component.html',
   styleUrl: './card-display.scss',
 })

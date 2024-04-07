@@ -1,0 +1,8 @@
+<mat-card class="pokemon-card {{pokemon.types[0].type.name}}" >
+  <mat-card-header class="pokemon-card-header">
+    <mat-card-title class="pokemon-name">{{pokemon.name}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="pokemon-card-content">
+    <img mat-card-md-image class="pokemon-img" src={{pokemon.sprites.front_default}} alt="picture of {{pokemon.name}}">
+  </mat-card-content>
+</mat-card>

@@ -20,6 +20,7 @@
 <ng-template #partyDisplay >
   <ng-container *ngFor="let member of currentParty$ |async">
     <!-- TODO Add a material card for each pokemon. -->
-    <p>{{member.name}}</p>
+    <!-- <party-display [pokemon]="member"></party-display> -->
+    <party-display [pokemon]="member"></party-display>
   </ng-container>
 </ng-template>
